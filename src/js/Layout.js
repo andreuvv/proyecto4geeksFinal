@@ -1,6 +1,7 @@
 import React from 'react';
 import { Login } from './views/login';
 import { Home } from './views/home';
+import { Profile } from './views/profile';
 //import { BrowserRouter, Route, Switch } from "react-router-dom";
 //import injectContext from "./store/appContext";
 
@@ -8,7 +9,7 @@ import { Home } from './views/home';
 function Layout() {
   return (
     <>
-      < Login />
+      < Profile />
     </>
   );
 }

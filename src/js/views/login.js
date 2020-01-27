@@ -3,31 +3,33 @@ import '../../styles/login.css';
 
 export const Login = () => {
 	return (
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                   <h1>JoinUs</h1>
+        <div className="container">
+            <div className="row">
+                <div id="loginLogo" className="col-12">
+                    <img id="logo" src="https://i.imgur.com/JiDOyLU.png" className="img-fluid rounded float-left"></img>
                 </div>
-                <div class="col-6 left-side">
-
-                        <form>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" placeholder="Correo electrónico"></input>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password" placeholder="Contraseña"></input>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                            </div>
-                            <div class="form-group">
-                                <a href="#">¿Olvidaste tu contraseña?</a>
-                            </div>
-                            <div class="form-group">
-                                <label>¿No tienes una cuenta? </label>
-                                <a href="#"> Regístrate</a>
-                            </div>
-                        </form>
+                <div id="loginImage" className="col-6 left-align">
+                    <img src="https://i.imgur.com/MH5zeke.jpg" className="img-fluid"></img>
+                </div>
+                <div className="col-6 right-side">
+                    <form>
+                        <div className="form-group">
+                            <input type="email" className="form-control" id="email" placeholder="Correo electrónico"></input>
+                        </div>
+                        <div className="form-group">
+                            <input type="password" className="form-control" id="password" placeholder="Contraseña"></input>
+                        </div>
+                        <div className="form-group">
+                            <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                        </div>
+                        <div className="form-group">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <div className="form-group">
+                            <label>¿No tienes una cuenta? </label>
+                            <a href="#"> Regístrate</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

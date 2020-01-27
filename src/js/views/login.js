@@ -1,5 +1,6 @@
 import React from "react";
 import '../../styles/login.css';
+import { Link } from "react-router-dom";
 
 export const Login = () => {
 	return (
@@ -20,7 +21,7 @@ export const Login = () => {
                             <input type="password" className="form-control" id="password" placeholder="Contraseña"></input>
                         </div>
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary">Iniciar sesión</button>
+                            <Link to="/home" className="btn btn-primary">Iniciar sesión</Link>
                         </div>
                         <div className="form-group">
                             <a href="#">¿Olvidaste tu contraseña?</a>

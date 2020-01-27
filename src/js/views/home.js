@@ -1,14 +1,10 @@
 import React from "react";
 import '../../styles/home.css';
-import { Navbar } from '../../component/navbar.js';
 import { Card } from '../../component/card.js';
 
 export const Home = () => {
 	return (
         <div class="container">
-            <div>
-                < Navbar />
-            </div>
             <div class="row">
                 <div class="col-6">
                     <div class="card" style={{ width: 100 + "%" }}>

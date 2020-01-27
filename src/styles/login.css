@@ -1,11 +1,22 @@
 form{
     margin-top: 33%;
+    align-content: center;
 }
-
+#logo{
+    height: 100px;
+    width: 300px;
+}
+#loginImage{
+}
 h1{
     margin-top: 50px;
 }
 
 button{
     width: 100%;
+}
+#loginLogo{
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }

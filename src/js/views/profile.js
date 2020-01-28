@@ -12,7 +12,7 @@ export const Profile = () => {
                     <div class="card cardProfile" style={{ width: 100 + "%" }}>
                         <div class="card-body">
                             <h1 class="card-title">Juanito Pérez</h1>
-                            <h5 class="card-title">@Juanipe</h5>
+                            <h5 class="card-title">@Juanete</h5>
                             <h5 class="card-title">Santiago, Chile</h5>
                             <p class="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
                             <p class="card-text">¡Viviendo un día a la vez!</p> 

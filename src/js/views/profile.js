@@ -9,13 +9,14 @@ export const Profile = () => {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" class="profilePicture"/>
                 </div>
                 <div class="col-8">
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div class="card cardProfile" style={{ width: 100 + "%" }}>
                         <div class="card-body">
                             <h1 class="card-title">Juanito Pérez</h1>
                             <h5 class="card-title">@Juanipe</h5>
                             <h5 class="card-title">Santiago, Chile</h5>
-                            <p>Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
-                            <p>¡Vive y de vivir!</p> 
+                            <p class="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
+                            <p class="card-text">¡Viviendo un día a la vez!</p> 
+                            <a href="#" class="card-link">Editar perfil</a>
                         </div>
                     </div>
                 </div>

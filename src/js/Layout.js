@@ -4,6 +4,7 @@ import { Login } from './views/login';
 import { Home } from './views/home';
 import { Navbar } from './component/navbar';
 import { Profile } from './views/profile';
+import { Detail } from './views/detail';
 import injectContext from "./store/appContext";
 
 
@@ -16,7 +17,8 @@ export const Layout = () => {
 					<Switch>
 						<Route exact path="/" component={Login} />
 						<Route path="/profile" component={Profile} />
-            <Route path="/home" component={Home} />
+            			<Route path="/home" component={Home} />
+						<Route path="/detail" component={Detail} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 			</BrowserRouter>

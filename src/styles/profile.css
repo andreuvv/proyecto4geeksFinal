@@ -9,10 +9,6 @@ body{
     background-color: #ddf3f2;
 }
 
-.container{
-    margin: 50px; 
-}
-
-nav{
-    margin: 50px;
+.cardProfile{
+    border-radius: 20px;
 }

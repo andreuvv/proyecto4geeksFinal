@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
-    return (     
+    return (      
         <nav className="navbar sticky-top navbar-light bg-light mb-3">
 		    <Link to="/home">
 			    <span className="navbar-brand mb-0 h1">JoinUs</span>

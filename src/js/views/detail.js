@@ -2,6 +2,7 @@ import React from "react";
 import '../../styles/detail.css';
 import { CardUser } from '../component/cardUser.js';
 import { CardDetail } from '../component/cardDetail.js';
+import { Link } from "react-router-dom";
 
 export const Detail = () => {
 	return (
@@ -14,7 +15,9 @@ export const Detail = () => {
                 </div>
                 <div className="col-4 right-side">
                     <div class="card" style={{ width: 100 + "%" }}>
-                        < CardUser />
+                        <Link to="/profile">
+                            < CardUser />
+                        </Link>   
                     </div>
                 </div>
             </div>

@@ -28,7 +28,9 @@ export const Login = () => {
                         </div>
                         <div className="form-group">
                             <label>¿No tienes una cuenta? </label>
-                            <a href="#"> Regístrate</a>
+                            <Link to="/formregister">
+                            <a> Regístrate</a>
+                            </Link>
                         </div>
                     </form>
                 </div>

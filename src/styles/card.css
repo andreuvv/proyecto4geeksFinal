@@ -3,5 +3,8 @@
     text-decoration-color: white;
 }
 #sumarse{
-    background-color: green;
+    float: right;
+}
+#estado{
+    font-style: italic;
 }

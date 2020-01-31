@@ -5,3 +5,12 @@
 body{
     background-color: #eedeaa;
 }
+
+a:link
+{
+text-decoration: none;
+font-style: none;
+font-weight: none;
+font-variant: none;
+}
+

@@ -6,9 +6,6 @@ export const Login = () => {
 	return (
         <div className="container">
             <div className="row">
-                <div id="loginLogo" className="col-12">
-                    <img id="logo" src="https://i.imgur.com/JiDOyLU.png" className="img-fluid rounded float-left"></img>
-                </div>
                 <div id="loginImage" className="col-6 left-align">
                     <img src="https://i.imgur.com/MH5zeke.jpg" className="img-fluid"></img>
                 </div>

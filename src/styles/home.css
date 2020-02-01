@@ -6,11 +6,21 @@ body{
     background-color: #eedeaa;
 }
 
-a:link
+/* a:link
 {
 text-decoration: none;
-font-style: none;
-font-weight: none;
-font-variant: none;
+color: black;
 }
 
+a:visited{
+    color: black;
+} */
+
+.cardlink:link{
+    text-decoration: none;
+    color: black;
+}
+
+.cardlink:visited{
+    color: black;
+}

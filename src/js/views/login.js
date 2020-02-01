@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 export const Login = () => {
 	return (
-        <div className="container">
+        <div className="container-fluid">
             <div className="row">
                 <div id="loginImage" className="col-6 left-align">
-                    <img src="https://i.imgur.com/MH5zeke.jpg" className="img-fluid"></img>
+                    <img src="/assets/images/logo.svg" className="img-fluid"></img>
                 </div>
                 <div className="col-6 right-side">
                     <form>

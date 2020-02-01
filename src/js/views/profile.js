@@ -16,7 +16,7 @@ export const Profile = () => {
                             <h5 class="card-title">Santiago, Chile</h5>
                             <p class="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
                             <p class="card-text">¡Viviendo un día a la vez!</p> 
-                            <a href="#" class="card-link">Editar perfil</a>
+                            <a href="#" id="editarperfil" class="card-link">Editar perfil</a>
                         </div>
                     </div>
                 </div>

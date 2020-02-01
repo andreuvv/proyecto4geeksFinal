@@ -9,25 +9,25 @@ export const Home = () => {
             <div class="row">
                 <div class="col-6">
                     <div class="card" style={{ width: 100 + "%" }}>
-                    <Link to="/detail">
+                    <Link to="/detail" className="cardlink">
                         < Card />
                     </Link>   
                     </div>
                     <br></br>
                     <div class="card" style={{ width: 100 + "%" }}>
-                    <Link to="/detail">
+                    <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 
                     </div>
                     <br></br>
                     <div class="card" style={{ width: 100 + "%" }}>
-                    <Link to="/detail">
+                    <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 
                     </div>
                     <br></br>
                     <div class="card" style={{ width: 100 + "%" }}>
-                    <Link to="/detail">
+                    <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 
                     </div>

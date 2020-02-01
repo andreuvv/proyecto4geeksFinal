@@ -12,3 +12,7 @@ body{
 .cardProfile{
     border-radius: 20px;
 }
+
+#editarperfil{
+    text-decoration: cadetblue;
+}

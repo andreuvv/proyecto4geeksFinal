@@ -15,7 +15,7 @@ export const Detail = () => {
                 </div>
                 <div className="col-4 right-side">
                     <div class="card" style={{ width: 100 + "%" }}>
-                        <Link to="/profile">
+                        <Link to="/profile" className="cardlink">
                             < CardUser />
                         </Link>   
                     </div>

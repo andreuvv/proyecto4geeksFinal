@@ -1,37 +1,88 @@
 import React from "react";
 import '../../styles/profile.css';
+import { Link } from 'react-router-dom';
+import { Card } from '../component/card.js';
 
 export const Profile = () => {
 	return (
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" class="profilePicture"/>
+        <div className="container">
+            <div className="row">
+                <div className="col-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" className="profilePicture"/>
                 </div>
-                <div class="col-8">
-                    <div class="card cardProfile" style={{ width: 100 + "%" }}>
-                        <div class="card-body">
-                            <h1 class="card-title">Juanito Pérez</h1>
-                            <h5 class="card-title">@Juanete</h5>
-                            <h5 class="card-title">Santiago, Chile</h5>
-                            <p class="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
-                            <p class="card-text">¡Viviendo un día a la vez!</p> 
-                            <a href="#" id="editarperfil" class="card-link">Editar perfil</a>
+                <div className="col-8">
+                    <div className="card cardProfile" style={{ width: 100 + "%" }}>
+                        <div className="card-body">
+                            <h1 className="card-title">Juanito Pérez</h1>
+                            <h5 className="card-title">@Juanete</h5>
+                            <h5 className="card-title">Santiago, Chile</h5>
+                            <p className="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
+                            <p className="card-text">¡Viviendo un día a la vez!</p> 
+                            <a href="#" id="editarperfil" className="card-link">Editar perfil</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                <nav className="navbar navbar-light bg-light mb-3">
-			        <a to="#">
-				        <span className="navbar-brand mb-1 h1">Participando</span>
-			        </a>
-			        <a to="#">
-				        <span className="navbar-brand mb-2 h1">Creados</span>
-			        </a>
-		        </nav>
-                </div>                
+            <div className="row">
+                <div className="col-12">
+                  <ul className="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                        <li className="nav-item">
+                            <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Eventos Participando</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Eventos Creados</a>
+                        </li>
+                    </ul>
+                    <div className="tab-content" id="pills-tabContent">
+                        <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <div className="card">
+                                    <Link to="/detail" className="cardlink">
+                                        < Card className="cardbox"/>
+                                    </Link>   
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="card">
+                                    <Link to="/detail" className="cardlink">
+                                        < Card className="cardbox"/>
+                                    </Link>   
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="card">
+                                    <Link to="/detail" className="cardlink">
+                                        < Card className="cardbox"/>
+                                    </Link>   
+                                    </div>
+                                </div>
+                                <div className="col">
+                                    <div className="card">
+                                    <Link to="/detail" className="cardlink">
+                                        < Card className="cardbox"/>
+                                    </Link>   
+                                    </div>
+                                </div>          
+                            </div>
+                        </div>
+                        </div>
+                        <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="card">
+                                        <Link to="/detail" className="cardlink">
+                                            < Card className="cardbox"/>
+                                        </Link>   
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 	);

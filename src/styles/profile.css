@@ -16,3 +16,7 @@ body{
 #editarperfil{
     text-decoration: cadetblue;
 }
+
+.cardbox{
+    border-radius: 20px;
+}

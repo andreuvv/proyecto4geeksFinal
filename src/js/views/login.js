@@ -21,12 +21,12 @@ export const Login = () => {
                             <Link to="/home" className="btn btn-primary">Iniciar sesión</Link>
                         </div>
                         <div className="form-group">
-                            <a href="...">¿Olvidaste tu contraseña?</a>
+                            <button href="..." id="contraseña">¿Olvidaste tu contraseña?</button>
                         </div>
                         <div className="form-group">
                             <label>¿No tienes una cuenta? </label>
                             <Link to="/formregister">
-                            <a href="..."> Regístrate</a>
+                            <button href="..." id="registro"> Regístrate</button>
                             </Link>
                         </div>
                     </form>

@@ -6,11 +6,32 @@ form{
     width: 300px;
 }
 
-button{
-    width: 100%;
-}
 #loginLogo{
     background-color: white;
     margin-top: 0px;
     margin-bottom: 5px;
+}
+
+#contraseña {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#registro {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: #069;
+    text-decoration: underline;
+    cursor: pointer;
 }

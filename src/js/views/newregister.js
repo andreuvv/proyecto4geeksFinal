@@ -66,7 +66,7 @@ export const NewRegister = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div class="col-6">
+                    <div className="col-6">
                         <button type="button" className="btn btn-primary ">Crear evento</button>
                     </div>
                     <div className="col-6">

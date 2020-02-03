@@ -35,38 +35,38 @@ export const Profile = () => {
                     </ul>
                     <div className="tab-content" id="pills-tabContent">
                         <div className="tab-pane fade show active" id="pills-participando" role="tabpanel" aria-labelledby="pills-participando-tab">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col">
-                                    <div className="card">
-                                    <Link to="/detail" className="cardlink">
-                                        < Card className="cardbox"/>
-                                    </Link>   
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="card">
+                                        <Link to="/detail" className="cardlink">
+                                            <Card/>
+                                        </Link>   
+                                        </div>
                                     </div>
+                                    <div className="col">
+                                        <div className="card">
+                                        <Link to="/detail" className="cardlink">
+                                            <Card/>
+                                        </Link>   
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                        <Link to="/detail" className="cardlink">
+                                            <Card/>
+                                        </Link>   
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <div className="card">
+                                        <Link to="/detail" className="cardlink">
+                                            <Card/>
+                                        </Link>   
+                                        </div>
+                                    </div>          
                                 </div>
-                                <div className="col">
-                                    <div className="card">
-                                    <Link to="/detail" className="cardlink">
-                                        < Card className="cardbox"/>
-                                    </Link>   
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card">
-                                    <Link to="/detail" className="cardlink">
-                                        < Card className="cardbox"/>
-                                    </Link>   
-                                    </div>
-                                </div>
-                                <div className="col">
-                                    <div className="card">
-                                    <Link to="/detail" className="cardlink">
-                                        < Card className="cardbox"/>
-                                    </Link>   
-                                    </div>
-                                </div>          
                             </div>
-                        </div>
                         </div>
                         <div className="tab-pane fade" id="pills-creados" role="tabpanel" aria-labelledby="pills-creados-tab">
                             <div className="container">
@@ -74,7 +74,7 @@ export const Profile = () => {
                                     <div className="col">
                                         <div className="card">
                                         <Link to="/detail" className="cardlink">
-                                            < Card className="cardbox"/>
+                                            <Card/>
                                         </Link>   
                                         </div>
                                     </div>

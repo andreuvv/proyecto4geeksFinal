@@ -4,6 +4,7 @@
 }
 #sumarse{
     float: right;
+    width: 50%;
 }
 #estado{
     font-style: italic;

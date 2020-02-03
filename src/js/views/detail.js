@@ -9,12 +9,12 @@ export const Detail = () => {
         <div className="container">
             <div className="row">
                 <div className="col-8">
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div className="card" style={{ width: 100 + "%" }}>
                         < CardDetail />   
                     </div>
                 </div>
                 <div className="col-4 right-side">
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div className="card" style={{ width: 100 + "%" }}>
                         <Link to="/profile" className="cardlink">
                             < CardUser />
                         </Link>   

@@ -5,28 +5,28 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <div class="card" style={{ width: 100 + "%" }}>
+        <div className="container">
+            <div className="row">
+                <div className="col-6">
+                    <div className="card" style={{ width: 100 + "%" }}>
                     <Link to="/detail" className="cardlink">
                         < Card />
                     </Link>   
                     </div>
                     <br></br>
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div className="card" style={{ width: 100 + "%" }}>
                     <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 
                     </div>
                     <br></br>
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div className="card" style={{ width: 100 + "%" }}>
                     <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 
                     </div>
                     <br></br>
-                    <div class="card" style={{ width: 100 + "%" }}>
+                    <div className="card" style={{ width: 100 + "%" }}>
                     <Link to="/detail" className="cardlink">
                         < Card />
                     </Link> 

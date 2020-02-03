@@ -17,6 +17,10 @@ body{
     text-decoration: cadetblue;
 }
 
-.cardbox{
-    border-radius: 20px;
+#pills-participando-tab{
+    margin-bottom: 20px;
+}
+
+#pills-creados-tab{
+    margin-bottom: 20px;
 }

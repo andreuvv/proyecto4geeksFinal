@@ -8,7 +8,7 @@ export const Profile = () => {
         <div className="container">
             <div className="row">
                 <div className="col-4">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" className="profilePicture"/>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" alt="profile" className="profilePicture"/>
                 </div>
                 <div className="col-8">
                     <div className="card cardProfile" style={{ width: 100 + "%" }}>
@@ -18,7 +18,7 @@ export const Profile = () => {
                             <h5 className="card-title">Santiago, Chile</h5>
                             <p className="card-text">Amo los gatos, el café, Gamer, Hijo de Maria Tereza</p>
                             <p className="card-text">¡Viviendo un día a la vez!</p> 
-                            <a href="#" id="editarperfil" className="card-link">Editar perfil</a>
+                            <a href="..." id="editarperfil" className="card-link">Editar perfil</a>
                         </div>
                     </div>
                 </div>
@@ -27,14 +27,14 @@ export const Profile = () => {
                 <div className="col-12">
                   <ul className="nav nav-pills nav-fill" id="pills-tab" role="tablist">
                         <li className="nav-item">
-                            <a className="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Eventos Participando</a>
+                            <a className="nav-link active" id="pills-participando-tab" data-toggle="pill" href="#pills-participando" role="tab" aria-controls="pills-participando" aria-selected="true">Eventos Participando</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Eventos Creados</a>
+                            <a className="nav-link" id="pills-creados-tab" data-toggle="pill" href="#pills-creados" role="tab" aria-controls="pills-creados" aria-selected="false">Eventos Creados</a>
                         </li>
                     </ul>
                     <div className="tab-content" id="pills-tabContent">
-                        <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                        <div className="tab-pane fade show active" id="pills-participando" role="tabpanel" aria-labelledby="pills-participando-tab">
                         <div className="container">
                             <div className="row">
                                 <div className="col">
@@ -68,7 +68,7 @@ export const Profile = () => {
                             </div>
                         </div>
                         </div>
-                        <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div className="tab-pane fade" id="pills-creados" role="tabpanel" aria-labelledby="pills-creados-tab">
                             <div className="container">
                                 <div className="row">
                                     <div className="col">

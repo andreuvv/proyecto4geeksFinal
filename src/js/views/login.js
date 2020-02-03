@@ -7,7 +7,7 @@ export const Login = () => {
         <div className="container-fluid">
             <div className="row">
                 <div id="loginImage" className="col-6 left-align">
-                    <img src="/assets/images/logo.svg" className="img-fluid"></img>
+                    <img src="/assets/images/logo.svg" alt="logo" className="img-fluid"></img>
                 </div>
                 <div className="col-6 right-side">
                     <form>
@@ -21,12 +21,12 @@ export const Login = () => {
                             <Link to="/home" className="btn btn-primary">Iniciar sesión</Link>
                         </div>
                         <div className="form-group">
-                            <a href="#">¿Olvidaste tu contraseña?</a>
+                            <a href="...">¿Olvidaste tu contraseña?</a>
                         </div>
                         <div className="form-group">
                             <label>¿No tienes una cuenta? </label>
                             <Link to="/formregister">
-                            <a> Regístrate</a>
+                            <a href="..."> Regístrate</a>
                             </Link>
                         </div>
                     </form>

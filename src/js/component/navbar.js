@@ -10,8 +10,7 @@ export const Navbar = () => {
 				<div className="col px-0" >
 					<nav className="navbar sticky-top navbar-dark bg-primary" id="navbar">						
 							<Link to="/home">
-								<div className="">
-								<img src="/assets/images/logo3.png" alt="logo"></img>								
+								<div className="">								
 								</div>
 							</Link>					
 						<div className="row">

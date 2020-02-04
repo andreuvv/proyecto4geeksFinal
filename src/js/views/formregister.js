@@ -7,7 +7,7 @@ import '../../styles/formregister.css';
 export const FormRegister = () => {
     return (
         <div className="container-fluid">
-            <div className="col" id="reg">
+            <div className="col" className="text-center" id="reg">
                 <h1> Regístrate</h1><br></br><br></br>
             </div>
             <form >

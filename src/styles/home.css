@@ -24,3 +24,7 @@ a:visited{
 .cardlink:visited{
     color: black;
 }
+
+.container-home {
+    margin-top: 20px;
+}

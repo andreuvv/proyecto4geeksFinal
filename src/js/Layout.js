@@ -5,7 +5,7 @@ import { Home } from './views/home';
 import { Navbar } from './component/navbar';
 import { Profile } from './views/profile';
 import { FormRegister } from './views/formregister';
-import { NewRegister } from './views/newregister';
+import { NewRegister } from './component/newregister';
 import { Detail } from './views/detail';
 import injectContext from "./store/appContext";
 
@@ -21,7 +21,7 @@ export const Layout = () => {
 						<Route exact path="/" component={Login} />
 						<Route path="/profile" component={Profile} />
            			    <Route path="/home" component={Home} />
-						<Route path="/formregister" component={FormRegister} /> 
+						<Route path="/formregister" component={FormRegister} />
 						<Route path="/newregister" component={NewRegister} />
             			<Route path="/home" component={Home} />
 						<Route path="/detail" component={Detail} />

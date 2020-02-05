@@ -4,8 +4,7 @@ import '../../styles/newregister.css';
 
 export const NewRegister = () => {
     return (
-
-        <div className="container-fluid " > <br></br>
+        <div className="container-fluid">
             <form>
                 <div className="row">
                     <div className="col-12" ><br></br>

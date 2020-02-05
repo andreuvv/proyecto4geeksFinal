@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
 	return (
-        <div className="container">
+        <div className="container container-home">
             <div className="row">
                 <div className="col-6">
                     <div className="card" style={{ width: 100 + "%" }}>

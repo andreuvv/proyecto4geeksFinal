@@ -1,12 +1,14 @@
 import React from "react";
 import '../../styles/login.css';
 import { Link } from "react-router-dom";
+import { Footer } from '../component/footer.js';
 
 export const Login = () => {
 	return (
+        <>
         <div className="container-fluid">
             <div className="row">
-                <div id="loginImage" className="col-6 left-align">
+                <div id="loginImage" className="col-6 left-align bg-primary">
                     <img src="/assets/images/logo.svg" alt="logo" className="img-fluid"></img>
                 </div>
                 <div className="col-6 right-side">
@@ -32,6 +34,9 @@ export const Login = () => {
                     </form>
                 </div>
             </div>
+           
         </div>
+        <Footer />
+        </>
 	);
 };

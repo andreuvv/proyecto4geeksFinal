@@ -17,5 +17,5 @@ export const Card = () => {
                 <button href="..." id="sumarse" className="btn btn-success">Sumarse</button>
             </div>
         </div>
-    );
+    )
 }        

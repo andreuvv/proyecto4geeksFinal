@@ -4,7 +4,7 @@ import '../../styles/newregister.css';
 
 export const NewRegister = () => {
     return (
-            <>
+        <div>
         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#crearEvento">
             Crear Evento
         </button>
@@ -88,6 +88,6 @@ export const NewRegister = () => {
                 </div>
             </div>
         </div>
-        </>
+    </div>
     )
 }

@@ -2,17 +2,17 @@ import React from 'react';
 
 
 
-export const NewRegister = () => {
+export const EditEvent = () => {
     return (
         <div>
-        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#crearEvento">
-            Crear Evento
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#editarEvento">
+            Editar evento
         </button>
-        <div className="modal fade" id="crearEvento" tabindex="-1" role="dialog" aria-labelledby="creacionEvento" aria-hidden="true">
+        <div className="modal fade" id="editarEvento" tabindex="-1" role="dialog" aria-labelledby="editarEvento" aria-hidden="true">
             <div className="modal-dialog" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="creacionEvento">Crear nuevo evento</h5>
+                        <h5 className="modal-title" id="editarEvento">Editar evento</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -22,7 +22,7 @@ export const NewRegister = () => {
                             <form>
                                 <div className="row">
                                     <div className="col-12" ><br></br>
-                                        <input type="text" className="form-control" placeholder="Nombre del evento"></input><br></br>
+                                        <input type="text" className="form-control" placeholder="Nombre del evento" readonly="readonly"></input><br></br>
                                     </div>
                                     <div className="col-12 ">
                                         <input type="text" className="form-control" placeholder="Descripción del evento"></input><br></br>
@@ -31,7 +31,7 @@ export const NewRegister = () => {
                                 <label for="avatar">Seleccione foto del evento: </label>
                                 <div className="col-md-0"></div>
                                 <input type="file" accept="image/png, image/jpeg"></input><br></br><br></br><br></br>
-                                <input type="text" className="form-control" placeholder="Link video demostrativo"></input><br></br>
+                                <input type="text" className="form-control" placeholder="Link video demostrativo" readonly="readonly"></input><br></br>
                                 <div className="row">
                                     <div className="col-md-6 ">
                                         <label>Fecha inicio </label>
@@ -50,7 +50,7 @@ export const NewRegister = () => {
                                         <input type="time" className="form-control" placeholder="Hora término"/><br></br>
                                     </div>
                                 </div>
-                                <input type="text" className="form-control" placeholder="Dirección del evento"/><br></br>
+                                <input type="text" className="form-control" placeholder="Dirección del evento" readonly="readonly" /><br></br>
                                 <label>Requisitos</label>
                                 <div className="row">
                                     <div className="col-md-3 ">

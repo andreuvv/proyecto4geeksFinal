@@ -18,7 +18,8 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			
+			state.actions.getUsers("http://localhost:5000/usuario", "usuario");
+			state.actions.getUsers("http://localhost:5000/evento", "eventos");
 		}, []);
 
 		

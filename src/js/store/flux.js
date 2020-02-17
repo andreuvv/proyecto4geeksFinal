@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			usuario: {},
+			usuario: [],
 			eventos: []
 		},
 		actions: {
@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return resp.json(); 
 					})
 					.then(data => {
-						console.log(data); 
+					//	console.log(data); 
 						var obj = data;
 						setStore({ [propiedad]: obj });
 					})
@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return resp.json(); 
 					})
 					.then(data => {
-						console.log(data); 
+					//	console.log(data); 
 						var obj = data;
 						setStore({ [propiedad]: obj });
 					})
@@ -59,7 +59,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return resp.json(); 
 					})
 					.then(data => {
-						console.log(data); 
+					//	console.log(data); 
 						var obj = data;
 						setStore({ [propiedad]: obj });
 					})
@@ -79,7 +79,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return resp.json(); 
 					})
 					.then(data => {
-						console.log(data); 
+					//	console.log(data); 
 						var obj = data;
 						setStore({ [propiedad]: obj });
 					})
@@ -92,6 +92,3 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
-
-
-  

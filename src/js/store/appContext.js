@@ -25,8 +25,9 @@ const injectContext = PassedComponent => {
 					obj.estado_evento = "Activo";
 					obj.usuario_id = "1";
 
+			state.actions.get("http://localhost:5000/evento", "eventos");
 			state.actions.get("http://localhost:5000/usuario", "usuario");
-			state.actions.delete("http://localhost:5000/evento/4", "eventos", obj );
+			//state.actions.put("http://localhost:5000/evento/4", "eventos", obj );
 		}, []);
 
 		

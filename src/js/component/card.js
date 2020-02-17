@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/card.css';
 
+
 export const Card = () => {
     return (
         <div className="card" style={{ width: 100 + "%" }}>
@@ -14,8 +15,8 @@ export const Card = () => {
                 <p className="card-text d-flex">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
                 </p>
-                <button href="#" id="sumarse" className="btn btn-success">Sumarse</button>
+                <button href="..." id="sumarse" className="btn btn-success">Sumarse</button>                
             </div>
         </div>
-    );
+    )
 }        

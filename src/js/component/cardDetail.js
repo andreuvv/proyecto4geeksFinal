@@ -1,4 +1,7 @@
 import React from 'react';
+import '../../styles/card.css'
+import { EditEvent } from './editevent';
+
 
 export const CardDetail = () => {
     return (
@@ -11,6 +14,7 @@ export const CardDetail = () => {
                 <p className="card-text">Algunos Requerimientos</p>
                 <p className="card-text">Algunos Requerimientos</p>
                 <a href="..." id="sumarse" className="btn btn-success">Sumarse</a>
+                <EditEvent />
             </div>
         </div>
     );

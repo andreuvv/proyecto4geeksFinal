@@ -27,11 +27,16 @@ export const EditEvent = () => {
                                     <div className="col-12 ">
                                         <input type="text" className="form-control" placeholder="Descripción del evento"></input><br></br>
                                     </div>
+                             
+                                <div class="col-12">
+                                <select class="form-control">
+                                    <option value="">Estado del evento</option>
+                                    <option value="abierto">Abierto</option>
+                                    <option value="cerrado">Cerrado</option>
+                                    <option value="exitoso">Exitoso</option>
+                                </select><br></br>
                                 </div>
-                                <label for="avatar">Seleccione foto del evento: </label>
-                                <div className="col-md-0"></div>
-                                <input type="file" accept="image/png, image/jpeg"></input><br></br><br></br><br></br>
-                                <input type="text" className="form-control" placeholder="Link video demostrativo" readonly="readonly"></input><br></br>
+                            </div>
                                 <div className="row">
                                     <div className="col-md-6 ">
                                         <label>Fecha inicio </label>
@@ -51,7 +56,7 @@ export const EditEvent = () => {
                                     </div>
                                 </div>
                                 <input type="text" className="form-control" placeholder="Dirección del evento" readonly="readonly" /><br></br>
-                                <label>Requisitos</label>
+                                <label>Requerimientos</label>
                                 <div className="row">
                                     <div className="col-md-3 ">
                                         <input type="text" className="form-control"></input>

@@ -1,10 +1,11 @@
 #bajarse{
-    background-color: red;
+    float: right;
+    width: 20%;
     text-decoration-color: white;
 }
 #sumarse{
     float: right;
-    width: 50%;
+    width:20%;
 }
 #estado{
     font-style: italic;

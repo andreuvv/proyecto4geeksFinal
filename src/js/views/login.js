@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect, useContext }  from 'react';
 import '../../styles/login.css';
 import { Link } from "react-router-dom";
 import { Footer } from '../component/footer.js';
+import { Context } from "../store/appContext";
 
 export const Login = () => {
+    const { store, actions } = useContext(Context);
+
+    const [state,setState] = useState({
+
+        correo:"",
+        contrasena:""
+    });
+
+    function handleChange(e, propiedad) {
+        setState({...state, [propiedad]: e.target.value});
+    }
+
+    function handleSubmit(e) {
+        actions.post("http://localhost:5000/login", "usuario", state );
+        e.preventDefault();
+        console.log(state);
+    }
+
 	return (
         <>
         <div className="container-fluid">
@@ -12,15 +31,15 @@ export const Login = () => {
                     <img src="/assets/images/logo.svg" alt="logo" className="img-fluid"></img>
                 </div>
                 <div className="col-6 right-side">
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="form-group">
-                            <input type="email" className="form-control" id="email" placeholder="Correo electrónico"></input>
+                            <input type="email" className="form-control" id="email" placeholder="Correo electrónico" value={state.correo} onChange={(e)=>handleChange (e,"correo")} required></input>
                         </div>
                         <div className="form-group">
-                            <input type="password" className="form-control" id="password" placeholder="Contraseña"></input>
+                            <input type="password" className="form-control" id="password" placeholder="Contraseña" value={state.contrasena} onChange={(e)=>handleChange (e,"contrasena")} required ></input>
                         </div>
                         <div className="form-group">
-                            <Link to="/home" className="btn btn-primary">Iniciar sesión</Link>
+                        <button className="btn btn-primary" type="submit" value="Submit" >Iniciar sesión</button>
                         </div>
                         <div className="form-group">
                             <button href="..." id="contraseña">¿Olvidaste tu contraseña?</button>

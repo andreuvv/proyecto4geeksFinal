@@ -18,15 +18,10 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			var obj = new Object();
-					obj.titulo = "pintar la biblioteca";
-					obj.descripcion = "tapar todos los grafitis";
-					obj.fecha_limite = "18/12/2019";
-					obj.estado_evento = "Activo";
-					obj.usuario_id = "1";
-
-			state.actions.get("http://localhost:5000/usuario", "usuario");
-			state.actions.delete("http://localhost:5000/evento/4", "eventos", obj );
+			
+			state.actions.get("http://localhost:5000/evento", "eventos");
+			//state.actions.post("http://localhost:5000/evento", "eventos", obj );
+		
 		}, []);
 
 		

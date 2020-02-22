@@ -2,7 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			usuario: [],
-			eventos: []
+			eventos: [],
+			loggedIn: false
 		},
 		actions: {
 			get: (url, propiedad) => {
@@ -35,7 +36,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					
 				})
 					.then(resp => {
-						return resp.json(); 
+						console.log(resp);
+						if (resp.status === 404)
+							alert("Usuario o contraseña inconrrecta");
+						else	
+							return resp.json(); 
 					})
 					.then(data => {
 						console.log(data); 
@@ -43,7 +48,33 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ [propiedad]: obj });
 					})
 					.catch(error => {
-						console.log(error);
+						alert(error);
+					});
+			},
+			postUser: (url, propiedad,update) => {
+				fetch(url, {
+					method: "POST",
+					body: JSON.stringify(update),
+					headers:{
+						"Content-Type": "application/json"
+					}
+					
+				})
+					.then(resp => {
+						console.log(resp);
+						if (resp.status === 404)
+							alert("Usuario o contraseña inconrrecta");
+						else	
+							return resp.json(); 
+					})
+					.then(data => {
+						console.log(data); 
+						var obj = data;
+						setStore({ [propiedad]: obj });
+						setStore({loggedIn : true });
+					})
+					.catch(error => {
+						alert(error);
 					});
 			},
 			put: (url, propiedad,update) => {

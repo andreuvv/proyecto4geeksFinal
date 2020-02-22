@@ -28,7 +28,6 @@ export const Navbar = () => {
 							</Link>
 							<NewRegister/>
 							<Link onClick={()=>actions.sesion()} to="/">
-							
 								<div className="col">
 									<span className="navbar-brand mb-0 h1">Cerrar sesion</span>
 								</div>

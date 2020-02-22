@@ -20,6 +20,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			
 			state.actions.get("http://localhost:5000/evento", "eventos");
+			state.actions.get("http://localhost:5000/usuario", "usuarios");
 			//state.actions.post("http://localhost:5000/evento", "eventos", obj );
 		
 		}, []);

@@ -21,11 +21,7 @@ export const FormRegister = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        actions.postUser("http://localhost:5000/usuario", "usuario", state);
-        if (store.loggedIn === true) {
-            let { history } = props;
-            history.push("/home");
-        }
+        actions.postUser("http://localhost:5000/usuario", "sesionUsuario", state , props.history);
     }
 
 

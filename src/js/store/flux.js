@@ -33,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(error);
 					});
 			},
-			post: (url, propiedad, update) => {
+			post: (url, propiedad, update, history) => {
 				fetch(url, {
 					method: "POST",
 					body: JSON.stringify(update),
@@ -52,7 +52,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						console.log(data);
 						var obj = data;
-						setStore({ [propiedad]: obj });
+						//setStore( {[propiedad]: obj })
+						getActions().get(url, propiedad);
+						history.push("/home");
 					})
 					.catch(error => {
 						console.log(error);

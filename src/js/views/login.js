@@ -20,11 +20,7 @@ export const Login = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        actions.postUser("http://localhost:5000/login", "usuario", state );
-        if (store.loggedIn === true){
-            let { history } = props;
-            history.push("/home");
-        }
+        actions.postUser("http://localhost:5000/login", "sesionUsuario", state , props.history);
     }
    
 	return (

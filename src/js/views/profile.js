@@ -8,10 +8,7 @@ export const Profile = () => {
     const { store, actions } = useContext(Context);
 	return (
         <div className="container">
-            {!!store.usuario &&
-				store.usuario.map((item, i) => {
-                    return (
-                        <div  key={i} className="container">
+                        <div className="container">
                             <div className="row">
                                 <div className="col-4">
                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzGXDtCoDkikD9LPG1XFz_MpX1XKhs9mT9veS6F53PmsSoqTmC&s" alt="profile" className="profilePicture"/>
@@ -19,18 +16,17 @@ export const Profile = () => {
                                 <div className="col-8">
                                     <div className="card cardProfile" style={{ width: 100 + "%" }}>
                                         <div className="card-body">
-                                            <h1 className="card-title">{item.nombre} {item.apellido}</h1>
-                                            <h5 className="card-title">{item.nombre_usuario}</h5>
-                                            <h5 className="card-title">{item.ubicacion}</h5>
-                                            <p className="card-text">{item.descripcion}</p> 
+                                            <h1 className="card-title">{store.usuario.nombre} {store.usuario.apellido}</h1>
+                                            <h5 className="card-title">{store.usuario.nombre_usuario}</h5>
+                                            <h5 className="card-title">{store.usuario.ubicacion}</h5>
+                                            <p className="card-text">{store.usuario.descripcion}</p> 
                                             <a href="..." id="editarperfil" className="card-link">Editar perfil</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    );
-                })}
+              
             <div className="row">
                 <div className="col-12">
                   <ul className="nav nav-pills nav-fill" id="pills-tab" role="tablist">

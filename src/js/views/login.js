@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext }  from 'react';
+import React, { useState, useEffect, useContext, Redirect, Route }  from 'react';
 import '../../styles/login.css';
 import { Link } from "react-router-dom";
 import { Footer } from '../component/footer.js';
 import { Context } from "../store/appContext";
 
-export const Login = () => {
+export const Login = (props) => {
+    
     const { store, actions } = useContext(Context);
 
     const [state,setState] = useState({
@@ -18,11 +19,14 @@ export const Login = () => {
     }
 
     function handleSubmit(e) {
-        actions.post("http://localhost:5000/login", "usuario", state );
         e.preventDefault();
-        console.log(state);
+        actions.postUser("http://localhost:5000/login", "usuario", state );
+        if (store.loggedIn === true){
+            let { history } = props;
+            history.push("/home");
+        }
     }
-
+   
 	return (
         <>
         <div className="container-fluid">
@@ -39,7 +43,7 @@ export const Login = () => {
                             <input type="password" className="form-control" id="password" placeholder="Contraseña" value={state.contrasena} onChange={(e)=>handleChange (e,"contrasena")} required ></input>
                         </div>
                         <div className="form-group">
-                        <button className="btn btn-primary" type="submit" value="Submit" >Iniciar sesión</button>
+                        <button className="btn btn-primary" type="submit" onClick={handleSubmit} >Iniciar sesión</button>
                         </div>
                         <div className="form-group">
                             <button href="..." id="contraseña">¿Olvidaste tu contraseña?</button>
@@ -57,5 +61,5 @@ export const Login = () => {
         </div>
         <Footer />
         </>
-	);
+    );
 };

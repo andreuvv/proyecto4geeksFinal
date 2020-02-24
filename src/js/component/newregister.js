@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, Redirect, Route } from 'react';
 import { Context } from "../store/appContext";
-
 
 export const NewRegister = (props) => {
 
@@ -41,7 +40,7 @@ export const NewRegister = (props) => {
                     </div>
                     <div className="modal-body">
                         <div className="container-fluid">
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} enctype='multipart/form-data'>
                                 <div className="row">
                                     <div className="col-12" ><br></br>
                                         <input type="text" className="form-control" placeholder="Nombre del evento" value={state.titulo} onChange={(e) => handleChange(e, "titulo")} required></input><br></br>
@@ -52,7 +51,7 @@ export const NewRegister = (props) => {
                                 </div>
                                 <label for="avatar">Seleccione foto del evento: </label>
                                 <div className="col-md-0"></div>
-                                <input type="file" accept="image/png, image/jpeg"></input><br></br><br></br><br></br>
+                                <input type="file" accept="image/png, image/jpeg" name='photo'></input><br></br><br></br><br></br>
                                 <div className="row">
                                     <div className="col-md-6">
                                         <label>Fecha Término</label>

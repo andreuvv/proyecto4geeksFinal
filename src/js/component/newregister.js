@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect, useContext, Redirect, Route } from 'react';
+import { Context } from "../store/appContext";
 
+export const NewRegister = (props) => {
+    
+    const { store, actions } = useContext(Context);
 
+    const [state,setState] = useState({
 
-export const NewRegister = () => {
+        imagen:""
+    });
+
+    function handleChange(e, propiedad) {
+        setState({...state, [propiedad]: e.target.value});
+    }
+
+    function handleSubmit(e) {
+        actions.postImagen("http://localhost:5000/newregister", "imagen", state );
+        }
+
     return (
         <div>
         <span className="navbar-brand mb-0 h1" data-toggle="modal" data-target="#crearEvento">
@@ -19,7 +34,7 @@ export const NewRegister = () => {
                     </div>
                     <div className="modal-body">
                         <div className="container-fluid">
-                            <form>
+                            <form onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="col-12" ><br></br>
                                         <input type="text" className="form-control" placeholder="Nombre del evento"></input><br></br>
@@ -30,7 +45,7 @@ export const NewRegister = () => {
                                 </div>
                                 <label for="avatar">Seleccione foto del evento: </label>
                                 <div className="col-md-0"></div>
-                                <input type="file" accept="image/png, image/jpeg"></input><br></br><br></br><br></br>
+                                <input type="file" accept="image/png, image/jpeg" ></input><br></br><br></br><br></br>
                                 <input type="text" className="form-control" placeholder="Link video demostrativo"></input><br></br>
                                 <div className="row">
                                     <div className="col-md-6 ">

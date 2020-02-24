@@ -52,7 +52,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						console.log(data);
 						var obj = data;
-						//setStore( {[propiedad]: obj })
 						getActions().get(url, propiedad);
 						history.push("/home");
 					})
@@ -86,10 +85,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						} else {
 							var obj = data;
 							setStore({ 
-								[propiedad]: obj,
+								sesionUsuario: obj,
 								loggedIn: true,
 								error: null
 							 });
+							 getActions().get(url, propiedad);
 							 history.push("/home");
 						}
 					})

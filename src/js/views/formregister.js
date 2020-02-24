@@ -21,7 +21,7 @@ export const FormRegister = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        actions.postUser("http://localhost:5000/usuario", "sesionUsuario", state , props.history);
+        actions.postUser("http://localhost:5000/usuario", "usuarios", state , props.history);
     }
 
 

@@ -1,12 +1,18 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			usuario: [],
+			usuarios: [],
+			sesionUsuario: [],
 			eventos: [],
 			loggedIn: false,
 			error: null
 		},
 		actions: {
+
+			sesion: () => {
+				setStore({ loggedIn: false})
+			},
+
 			get: (url, propiedad) => {
 				fetch(url, {
 					method: "GET",
@@ -27,7 +33,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(error);
 					});
 			},
-			post: (url, propiedad, update) => {
+			post: (url, propiedad, update, history) => {
 				fetch(url, {
 					method: "POST",
 					body: JSON.stringify(update),
@@ -46,13 +52,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						console.log(data);
 						var obj = data;
-						setStore({ [propiedad]: obj });
+						//setStore( {[propiedad]: obj })
+						getActions().get(url, propiedad);
+						history.push("/home");
 					})
 					.catch(error => {
-						alert(error);
+						console.log(error);
 					});
 			},
-			postUser: (url, propiedad, update) => {
+			postUser: (url, propiedad, update, history) => {
 				fetch(url, {
 					method: "POST",
 					body: JSON.stringify(update),
@@ -82,10 +90,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 								loggedIn: true,
 								error: null
 							 });
+							 history.push("/home");
 						}
 					})
 					.catch(error => {
-						alert(error);
+						console.log(error);
 					});
 			},
 			put: (url, propiedad, update) => {

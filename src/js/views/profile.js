@@ -16,10 +16,10 @@ export const Profile = () => {
                                 <div className="col-8">
                                     <div className="card cardProfile" style={{ width: 100 + "%" }}>
                                         <div className="card-body">
-                                            <h1 className="card-title">{store.usuario.nombre} {store.usuario.apellido}</h1>
-                                            <h5 className="card-title">{store.usuario.nombre_usuario}</h5>
-                                            <h5 className="card-title">{store.usuario.ubicacion}</h5>
-                                            <p className="card-text">{store.usuario.descripcion}</p> 
+                                            <h1 className="card-title">{store.sesionUsuario.nombre} {store.sesionUsuario.apellido}</h1>
+                                            <h5 className="card-title">{store.sesionUsuario.nombre_usuario}</h5>
+                                            <h5 className="card-title">{store.sesionUsuario.ubicacion}</h5>
+                                            <p className="card-text">{store.sesionUsuario.descripcion}</p> 
                                             <a href="..." id="editarperfil" className="card-link">Editar perfil</a>
                                         </div>
                                     </div>

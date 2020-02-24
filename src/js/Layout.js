@@ -25,7 +25,7 @@ export const Layout = () => {
 						<Route path="/formregister" component={FormRegister} />
 						<Route path="/newregister" component={NewRegister} />						
             			<Route path="/home" component={Home} />
-						<Route path="/detail" component={Detail} />
+						<Route path="/detail/:id" component={Detail} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>				
 			</BrowserRouter>

@@ -5,7 +5,7 @@ import { EditEvent } from './editevent';
 import { Bajarse } from './bajarse';
 
 
-export const CardDetail = () => {
+export const CardDetail = props => {
     return (
 
         <div className="card" >

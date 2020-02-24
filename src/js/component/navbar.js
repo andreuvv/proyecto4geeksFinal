@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect, useContext, Redirect, Route }  from 'react';
 import '../../styles/navbar.css';
 import { Link } from "react-router-dom";
 import { NewRegister } from './newregister';
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	return (
 		<div className="container-fluid" id="navbarid">
 			<div className="row " >
@@ -25,7 +27,7 @@ export const Navbar = () => {
 								</div>
 							</Link>
 							<NewRegister/>
-							<Link to="/#">
+							<Link onClick={()=>actions.sesion()} to="/">
 								<div className="col">
 									<span className="navbar-brand mb-0 h1">Cerrar sesion</span>
 								</div>

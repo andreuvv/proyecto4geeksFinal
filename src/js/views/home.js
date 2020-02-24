@@ -15,14 +15,14 @@ export const Home = () => {
                             <div className="row">
                                 <div className="col-6">
                                     <div  key={i} className="card" style={{ width: 100 + "%" }}>
-                                        <Link to="/detail" className="cardlink">
+                                        <Link to={"/detail/" + item.id} className="cardlink">
                                             <div className="card" style={{ width: 100 + "%" }}>
                                                 <img src="..." className="card-img-top" alt="..."></img>
                                                 <div className="card-body">
                                                     <h4 className="card-title">{item.titulo}</h4>
                                                     <br></br>
                                                     <h6 className="card-subtitle text-muted float-left">{item.usuario_id}</h6>
-                                                    <h6 id="estado" className="card-subtitle text-muted float-right">{item.estado}</h6>
+                                                    <h6 id="estado" className="card-subtitle text-muted float-right">{item.estado_evento}</h6>
                                                     <br></br>
                                                     <p className="card-text d-flex">
                                                     {item.descripcion}

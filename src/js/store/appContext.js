@@ -21,6 +21,7 @@ const injectContext = PassedComponent => {
 			
 			state.actions.get("http://localhost:5000/evento", "eventos");
 			state.actions.get("http://localhost:5000/usuario", "usuarios");
+			state.actions.get("http://localhost:5000/item", "items");
 			//state.actions.post("http://localhost:5000/evento", "eventos", obj );
 		
 		}, []);

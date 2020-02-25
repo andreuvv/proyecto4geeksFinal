@@ -9,19 +9,60 @@ export const NewRegister = (props) => {
         descripcion: "",
         fecha_limite: "",
         estado_evento: "Activo",
+        requerimientos: [],
+        singleItem:[],
         usuario_id: 0
     });
 
     function handleChange(e, propiedad) {
         setState({ ...state, [propiedad]: e.target.value });
+        console.log(state);
     }
 
     function handleSubmit(e) {
         e.preventDefault();
         let state2 = Object.assign(state, {usuario_id:store.sesionUsuario.id});
         actions.post("http://localhost:5000/evento", "eventos", state2,props.history);
+
+        !!state.requerimientos &&
+            state.requerimientos.map((item, i) => {
+                actions.post("http://localhost:5000/requerimiento", "requerimiento", item,props.history);
+            })
+
     }
 
+    function addMessage(e) {
+		if (e.target.value != "" && e.keyCode == 13) {
+
+            let obj = {};
+
+            obj.evento_id = "1";
+            obj.item_id = state.singleItem;
+            obj.cantidad_requerida = e.target.value;
+            obj.cantidad_actual = "0";
+            obj.estado_requerimiento = "Activo";
+            !!store.items &&
+                store.items.map((item, i) => {
+                    if (item.id == state.singleItem )
+                        obj.nombre = item.nombre;
+            })
+
+			setState({
+                ...state,
+                requerimientos: state.requerimientos.concat(obj)
+			});
+			e.target.value = "";
+		}
+	}
+
+    function addItem(e) {
+		if (e.target.value != "" && e.keyCode == 13) {
+            let data = {};
+                data.nombre = e.target.value;
+			actions.post("http://localhost:5000/item", "items", data, props.history);
+			e.target.value = "";
+		}
+	}
 
     return (
         <div>
@@ -59,13 +100,35 @@ export const NewRegister = (props) => {
                                 </div>
                                 <br></br>
                                 <label>Requerimientos</label>
-                                <select className="form-control">
-                                    <option>Default select</option>
-                                </select>
+
+                                { <ul className="list-group">
+						            {state.requerimientos.map((singleTask, i) => {
+							            return (
+								            <li className="list-group-item" key={i}>
+									            {singleTask.cantidad_requerida} {singleTask.nombre}
+								            </li>
+							            );
+						            })}
+                                </ul> }
+
                                 <div className="row">
-                                    <div className="col-md-3 ">
-                                        <input type="text" className="form-control"></input>
+                                    <div className="col">
+                                        <select  onChange={(e) => handleChange(e, "singleItem")} className="form-control">
+                                        {!!store.items &&
+				                            store.items.map((item, i) => {
+                                                return (
+                                                    <option key={i} value={item.id} >{item.nombre}</option>
+                                                );
+                                        })}
+                                        </select>
                                     </div>
+                                    <div className="col">
+                                        <input type="number" className="form-control" onKeyDown={(e) => addMessage(e)} placeholder="Cantidad"></input>
+                                    </div>
+                                </div>
+                                <br></br>
+                                <div className="row">
+                                    <input type="text" className="form-control" onKeyDown={(e) => addItem(e)} placeholder="Crear nuevo requerimiento"></input><br></br>
                                 </div>
                             </form>
                         </div>

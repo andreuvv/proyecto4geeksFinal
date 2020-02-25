@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			sesionUsuario: [],
 			userprofile: [],
 			eventos: [],
+			items: [],
 			loggedIn: false,
 			error: null
 		},

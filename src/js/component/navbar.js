@@ -21,7 +21,7 @@ export const Navbar = () => {
 									<span className="navbar-brand mb-0 h1">Inicio</span>
 								</div>
 							</Link>
-							<Link to="/profile">
+							<Link to={"/profile/" + store.sesionUsuario.id} >
 								<div className="col">
 									<span className="navbar-brand mb-0 h1">Perfil</span>
 								</div>

@@ -4,7 +4,6 @@ import { Context } from "../store/appContext";
 export const NewRegister = (props) => {
 
     const { store, actions } = useContext(Context);
-    console.log(store.sesionUsuario)
     const [state, setState] = useState({
         titulo: "",
         descripcion: "",
@@ -60,6 +59,9 @@ export const NewRegister = (props) => {
                                 </div>
                                 <br></br>
                                 <label>Requerimientos</label>
+                                <select className="form-control">
+                                    <option>Default select</option>
+                                </select>
                                 <div className="row">
                                     <div className="col-md-3 ">
                                         <input type="text" className="form-control"></input>
@@ -70,7 +72,7 @@ export const NewRegister = (props) => {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                        <button type="button" className="btn btn-primary"  type="submit" onClick={handleSubmit} >Publicar</button>
+                        <button type="button" className="btn btn-primary" data-dismiss="modal" type="submit" onClick={handleSubmit} >Publicar</button>
                     </div>
                 </div>
             </div>

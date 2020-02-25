@@ -59,6 +59,9 @@ export const NewRegister = (props) => {
                                 </div>
                                 <br></br>
                                 <label>Requerimientos</label>
+                                <select className="form-control">
+                                    <option>Default select</option>
+                                </select>
                                 <div className="row">
                                     <div className="col-md-3 ">
                                         <input type="text" className="form-control"></input>

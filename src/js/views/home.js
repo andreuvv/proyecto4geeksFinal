@@ -21,7 +21,14 @@ export const Home = () => {
                                                 <div className="card-body">
                                                     <h4 className="card-title">{item.titulo}</h4>
                                                     <br></br>
-                                                    <h6 className="card-subtitle text-muted float-left">{item.usuario_id}</h6>
+                                                    {!!store.usuarios &&
+                                                        store.usuarios.map((item2, i) => {
+                                                            if (item.usuario_id == item2.id){
+                                                                return (
+                                                                    <h6 className="card-subtitle text-muted float-left">{item2.nombre} {item2.apellido}</h6>
+                                                                    );
+                                                           }
+                                                    })}
                                                     <h6 id="estado" className="card-subtitle text-muted float-right">{item.estado_evento}</h6>
                                                     <br></br>
                                                     <p className="card-text d-flex">

@@ -20,7 +20,7 @@ export const Layout = () => {
 					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Login} />
-						<Route path="/profile" component={Profile} />
+						<Route path="/profile/:id" component={Profile} />
            			    <Route path="/home" component={Home} />
 						<Route path="/formregister" component={FormRegister} />
 						<Route path="/newregister" component={NewRegister} />						

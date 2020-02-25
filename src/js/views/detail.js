@@ -25,8 +25,10 @@ export const Detail = props => {
                                                 <div className="card-body">
                                                     <h6 className="card-subtitle text-muted float-right">{item.estado_evento}</h6>
                                                     <h5 className="card-title">{item.titulo}</h5>
+                                                    <p className="card-text">{item.descripcion}</p>
                                                     <p className="card-text">Algunos Requerimientos</p>
                                                     <p className="card-text">Algunos Requerimientos</p>
+                                                    <p className="card-text"><b>Fecha Limite:</b> {item.fecha_limite}</p>
                                                     <Bajarse />
                                                     <Sumarse />                
                                                     <EditEvent /> 
@@ -36,11 +38,9 @@ export const Detail = props => {
                                     </div>
                                     <div className="col-4 right-side">
                                         <div className="card" style={{ width: 100 + "%" }}>
-                                            <Link to="/profile" className="cardlink">
+                                            <Link to={"/profile/" + item.usuario_id} className="cardlink">
                                                 {!!store.usuarios &&
                                                     store.usuarios.map((item2, i) => {
-                                                        console.log(item2.id);
-                                                        console.log(item.usuario_id);
                                                         if (item2.id == item.usuario_id){
                                                             return (
                                                                 <div className="card" style={{ width: 100 + "%" }}>

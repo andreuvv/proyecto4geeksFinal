@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			usuarios: [],
 			sesionUsuario: [],
+			userprofile: [],
 			eventos: [],
 			loggedIn: false,
 			error: null
